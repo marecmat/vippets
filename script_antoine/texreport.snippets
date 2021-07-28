@@ -1,0 +1,117 @@
+snippet report "report template" b
+\documentclass[a4paper,11pt]{article}
+%Import base packages
+\usepackage[utf8]{inputenc}  % Format setting packages
+\usepackage[T1]{fontenc}     % 
+\usepackage[french]{babel}   % Language used
+\usepackage{etoolbox}        % Latex frontend for various tools (rule colors...)
+
+% Margins setting from geometry package
+\usepackage[
+    headheight = 14pt,       % minimum value for heaheight
+    top        = 2.5cm,      % 
+    bottom     = 2.5cm,      %
+    left       = 1.5cm,      %
+    right      = 1.5cm       %
+        ]{geometry}
+\usepackage{fancyhdr}        % Fancy page layout w/ headers, footers ...
+\usepackage{sectsty}         % edit sections fonts
+\usepackage{graphicx}        % Figures
+\usepackage{subcaption}      % For subfigures to have subcaptions
+\usepackage{floatrow}        % force figure position with `H` tag
+\usepackage{multirow}        % fancier tables with multiple rows
+\usepackage{wrapfig}         % Allows figures/tables to be flushed left/right
+
+\usepackage{amsmath}         % Maths equations
+\usepackage{array}           % array math environment
+\usepackage{appendix}        % Addition of appendices
+\usepackage{hyperref}        % reference elements in the report + clickable urls
+
+\usepackage{color}           % Adds support for coloring elements       
+\usepackage{xcolor}          % adds pre-defined colors eg: lighgray
+
+% colors used in the file
+\definecolor{sectioncolor}{RGB}{0, 0, 0}
+\definecolor{subsectioncolor}{RGB}{0, 0, 0}
+\definecolor{subsubsectioncolor}{RGB}{0, 0, 0}
+
+% \usepackage{footmisc lmodern, lastpage, wasysym, soul, enumitem, afterpage}   % addition packages that might be useful
+% Command to add a blank page to the report which won't count as a page
+\newcommand\blankpage{ \null \thispagestyle{empty} \addtocounter{page}{-1} \newpage}
+
+% Page layout; header and footer setup
+\pagestyle{fancy}
+\renewcommand{\sectionmark}[1]{\markright{#1}}  % Use simple section titles without numbers
+\renewcommand{\subsectionmark}[1]{}             % Get the current subsection for the header 
+
+% above and below lines for header, footer
+\renewcommand{\headrulewidth}{1pt}
+\renewcommand{\footrulewidth}{1pt}
+\renewcommand{\arraystretch}{1.5}
+\makeatletter
+\patchcmd{\headrule}{\hrule}{\color{sectioncolor}\hrule}{}{}
+\patchcmd{\footrule}{\hrule}{\color{sectioncolor}\hrule}{}{}
+\makeatother
+
+% Custom colored and numbering for section/subsections
+\renewcommand{\thesection}{\Roman{section}} 
+\sectionfont{\sffamily\color{sectioncolor}}  % sets colour of chapters
+\subsectionfont{\sffamily\color{subsectioncolor}}  % sets colour of sections
+\subsubsectionfont{\sffamily\color{subsubsectioncolor}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                        Start editing from here                           %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Header
+\lhead{${4}}                  
+\chead{} 
+\rhead{${2}}
+%Footer
+\lfoot{${1:name}}
+\cfoot{}
+\rfoot{\thepage} 
+
+\begin{document}
+\pagenumbering{gobble} % no page numbering before the beginning
+\begin{titlepage}
+    \begin{center}
+        \LARGE{${1}}
+            \vskip 3.5cm
+        \huge{${4:report type}}\\\\
+        \Large{\phantom{oui}}
+            \vskip 1.5cm
+            \rule{\linewidth}{0.5mm}\vspace{6mm}\\\\
+        \huge{${5:title}}
+            \rule{\linewidth}{0.5mm}\vspace{3mm}\\\\
+            \vskip 0.5cm
+        \Large{${6:subtitle}}
+            \vskip 3.5cm
+        \Large{\textbf{Encadrants: ${7:teachers}}} \\\\
+            \vskip 4cm
+            \includegraphics[width=300pt]{${8:logo.png}}
+	\end{center}
+\end{titlepage}
+\setcounter{figure}{0} \newpage
+\addcontentsline{toc}{section}{Sommaire} \tableofcontents
+\newpage \pagenumbering{arabic} \newpage
+
+${0:${VISUAL}}
+
+% End of the report
+% - Biblio
+\pagenumbering{roman}
+\bibliographystyle{unsrt}
+%\bibliography{biblio.bib}
+% - Tables + figures list
+\newpage
+\renewcommand*\listfigurename{Liste des figures}
+\listoffigures \addcontentsline{toc}{section}{Liste des figures}
+\listoftables \addcontentsline{toc}{section}{Liste des tables}
+% - Appendices
+\newpage 
+\addcontentsline{toc}{section}{Annexes}
+\renewcommand{\thesubsection}{\Alph{subsection}}
+\appendix
+\end{document}
+endsnippet

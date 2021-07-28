@@ -1,0 +1,226 @@
+########## MATH AND PHYSICS STUFF ##########
+
+extends math_symb
+
+snippet $ "Inline math environment" A 
+$ ${1} $$0
+endsnippet
+
+snippet * "Multiplication" A 
+\times
+endsnippet
+
+snippet . "Also multiplication"
+\cdot
+endsnippet
+
+snippet eq "Equation with a number" b
+\begin{equation}
+	${0:${VISUAL}}
+\end{equation}
+endsnippet
+
+snippet eqn "Equation with a number" b
+\begin{equation*}
+	${0:${VISUAL}}
+\end{equation*}
+endsnippet
+
+snippet eqan "Equation array without a number" b
+\begin{eqnarray*}
+	$1 & $2 & $3
+\end{eqnarray*}
+endsnippet
+
+snippet al "Align" b
+\begin{align}
+	${0:${VISUAL}}
+\end{align}
+endsnippet
+
+snippet alnn "Align without a number" b
+\begin{align*}
+	${0:${VISUAL}}
+\end{align*}
+endsnippet
+
+snippet eqa "Equation array" b
+\begin{eqnarray}
+	${1:${VISUAL}} & ${2:${VISUAL}} & ${0:${VISUAL}}
+\end{eqnarray}
+endsnippet
+
+snippet // "Fraction" A
+\frac{${1}}{${2}} $0
+endsnippet
+
+snippet c// "Also fraction" A
+\cfrac{${1}}{${2}} $0
+endsnippet
+
+snippet dv "Derivative" 
+\frac{d^${1} ${2}}{d ${3}^${1}}$0
+endsnippet
+
+snippet pdv "Partial derivative" 
+\frac{\partial^${1} ${2}}{\partial ${3}^${1}}$0
+endsnippet
+
+snippet vec "Vector writing" 
+\overrightarrow{${1:vector}}$0
+endsnippet
+
+snippet braket "Braket Notation" 
+\left\langle ${1:bra} \middle| ${2:ket} \right\rangle $0
+endsnippet
+
+snippet bra "Bra from Braket Notation" 
+\left\langle ${1:bra} \right| $0
+endsnippet
+
+snippet ket "Ket from Braket Notation" 
+\left| ${1:ket} \right\rangle $0
+endsnippet
+
+snippet moy "Mean"
+\left\langle ${1} \right\rangle $0
+endsnippet
+
+snippet lt "left" A 
+\left
+endsnippet
+
+snippet rt "right" A 
+\right
+endsnippet
+
+snippet mid "middle"
+\middle
+endsnippet
+
+##INTEGRALS##
+snippet int "Simple integral"
+\int_{${1}}^{${2}} ${3} \,$0
+endsnippet
+
+snippet 2int "Double integral"
+\iint_{${1}}^{${2}} $3 \,$0
+endsnippet
+
+snippet 3int "Triple integral"
+\iiint_{${1}}^{${2}} $3 \,$0
+endsnippet
+
+snippet 4int "Quadruple integral"
+\iiiint_{${1}}^{${2}} $3 \,$0
+endsnippet
+
+snippet nint "N integral"
+\idotsint_{${1}}^${2} $3\,$0
+endsnippet
+
+snippet oint "Closed simple integral"
+\oint_{${1}}^{$2} ${3} \,$0
+endsnippet
+
+##SUMS, PRODUCTS AND LIMITS##
+snippet sum "Sum"
+\sum_{${1}=${2}}^{${3}} $0
+endsnippet
+
+snippet prod "Product"
+\prod_{${1}=${2}}^{${3}} $0
+endsnippet
+
+snippet lim "Limit"
+\lim_{${1} \to ${2}} $0
+endsnippet
+
+
+##MATRIXES AND EQUATION SYSTEMS##
+
+snippet mat "Parentheses Matrix"
+\begin{matrix}
+${1} & ${2}\\\\
+${3} & ${4}
+\end{matrix}
+endsnippet
+
+snippet pmat "Parentheses Matrix"
+\begin{pmatrix}
+${1} & ${2}\\\\
+${3} & ${4}
+\end{pmatrix}
+endsnippet
+
+snippet bmat "Brackets Matrix"
+\begin{bmatrix}
+${1} & ${2}\\\\
+${3} & ${4}
+\end{bmatrix}
+endsnippet
+
+snippet cbmat "Braces Matrix"
+\begin{Bmatrix}
+${1} & ${2}\\\\
+${3} & ${4}
+\end{Bmatrix}
+endsnippet
+
+snippet det "Pipe Matrix"
+\begin{vmatrix}
+${1} & ${2}\\\\
+${3} & ${4}
+\end{vmatrix}
+endsnippet
+
+snippet inpmat "Inline Parentheses Matrix"
+$\big(\begin{smallmatrix}
+  ${1} & ${2}\\\\
+  ${3} & ${4}
+\end{smallmatrix}\big)$
+endsnippet
+
+snippet inbmat "Inline Brackets Matrix"
+$\left[\begin{smallmatrix}
+  ${1} & ${2}\\\\
+  ${3} & ${4}
+\end{smallmatrix}\right]$
+endsnippet
+
+snippet eqsys "Equation system"
+\begin{equation}
+    \begin{cases}
+      ${1} = ${2} \\\\
+      ${3} = ${4}
+    \end{cases}\,.
+\end{equation}
+$0
+endsnippet
+
+
+##Functions##
+
+snippet sqrt "Square root" A 
+\sqrt
+endsnippet
+
+snippet sin "Sin function" A 
+\text{sin}
+endsnippet
+
+snippet cos "Cosin function" A 
+\text{cos}
+endsnippet
+
+snippet tan "Tan function" A 
+\text{tan}
+endsnippet
+
+snippet ln "log e function" A 
+\text{ln}
+endsnippet
+
+snippet log "log function" A 
+\text{log}_{$1}$0
+endsnippet
