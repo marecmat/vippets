@@ -1,0 +1,17 @@
+global !p
+    def math():
+	    return vim.eval('vimtex#syntax#in_mathzone()') == '1'
+endglobal
+
+context
+snippet nabla "Nabla" A 
+    \nabla $0
+endsnippet
+
+snippet infty "Infinity" A 
+    \infty $0
+endsnippet
+
+snippet hbar "Reduced Planck's constant: h/2 pi"
+    \hAr
+endsnippet
