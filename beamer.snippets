@@ -1,0 +1,35 @@
+snippet frame "begin new frame" b
+\begin{frame}
+    \frametitle{$1}
+    $0
+\end{frame}
+endsnippet
+
+snippet cols "columns" b
+\begin{columns}
+    \begin{column}{$1\textwidth}
+        $0
+    \end{column}
+    \begin{column}{$2\textwidth}
+    \end{column}
+\end{columns}
+endsnippet
+
+snippet 3cols "columns" b
+\begin{columns}
+    \begin{column}{$1\textwidth}
+        $0
+    \end{column}
+    \begin{column}{$2\textwidth}
+    \end{column}
+    \begin{column}{$3\textwidth}
+    \end{column}
+\end{columns}
+endsnippet
+
+snippet overprint "overprint"
+\begin{overprint}
+    \onslide<1>$1
+    \onslide<2>$2
+    \onslide<3>$3
+\end{overprint}
