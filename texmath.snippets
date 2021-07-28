@@ -1,7 +1,11 @@
-########## MATH AND PHYSICS STUFF ##########
+global !p
+def math():
+    return vim.eval('vimtex#syntax#in_mathzone()') == '1'
+endglobal
+
 
 snippet $ "Inline math environment" A 
-$ ${1} $$0
+$ ${1} $ $0
 endsnippet
 
 snippet * "Multiplication" A 
