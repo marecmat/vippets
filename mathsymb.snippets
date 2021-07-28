@@ -1,0 +1,32 @@
+global !p
+def math():
+    return vim.eval('vimtex#syntax#in_mathzone()') == '1'
+endglobal
+
+context "math()"
+snippet nabla "Nabla" A 
+\nabla $0
+endsnippet
+
+context "math()"
+snippet infty "Infinity" A 
+\infty $0
+endsnippet
+
+context "math()"
+snippet hbar "Reduced Planck's constant: h/2 pi"
+\hAr
+endsnippet
+
+snippet => "implies" Ai
+\implies
+endsnippet
+
+snippet =< "implied by" Ai
+\impliedby
+endsnippet
+
+context "math()"
+snippet iff "iff" Ai
+\iff
+endsnippet
