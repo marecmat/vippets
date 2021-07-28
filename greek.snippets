@@ -1,219 +1,354 @@
+global !p
+def math():
+    return vim.eval('vimtex#syntax#in_mathzone()') == '1'
+endglobal
+
+context "math()"
 snippet alpha "Alpha" A
-    \alpha
+\alpha
 endsnippet
 
+context "math()"
 snippet Alpha "Uppercase Alpha" A 
-    \Alpha
+\Alpha
 endsnippet
 
+context "math()"
 snippet beta "Beta" A 
-    \beta
+\beta
 endsnippet
 
+context "math()"
 snippet Beta "Uppercase Beta" A 
-    \Beta
+\Beta
 endsnippet
 
+context "math()"
 snippet delta "Delta" A 
-    \delta
+\delta
 endsnippet
 
+context "math()"
 snippet Delta "Uppercase Delta" A 
-    \Delta
+\Delta
 endsnippet
 
+context "math()"
 snippet zeta "Zeta" A 
 \zeta
 endsnippet
 
+context "math()"
 snippet Zeta "Uppercase Zeta" A 
 \Zeta
 endsnippet
 
+context "math()"
 snippet eta "Eta" A 
 \eta
 endsnippet
 
+context "math()"
 snippet Eta "Uppercase Eta" A 
 \Eta
 endsnippet
 
+context "math()"
 snippet iota "Iota" A 
 \iota
 endsnippet
 
+context "math()"
 snippet Iota "Uppercase Iota" A 
 \Iota
 endsnippet
 
+context "math()"
+snippet ld "Lambda" A 
+\lambda
+endsnippet
+
+context "math()"
+snippet Ld "Uppercase Lambda" A 
+\Lambda
+endsnippet
+
+context "math()"
 snippet lambda "Lambda" A 
 \lambda
 endsnippet
 
+context "math()"
 snippet Lambda "Uppercase Lambda" A 
 \Lambda
 endsnippet
 
+context "math()"
 snippet mu "Mu" A 
 \mu
 endsnippet
 
+context "math()"
 snippet Mu "Uppercase Mu" A 
 \Mu
 endsnippet
 
+context "math()"
 snippet nu "Nu" A 
 \nu
 endsnippet
 
+context "math()"
 snippet Nu "Uppercase Nu" A 
 \Nu
 endsnippet
 
+context "math()"
 snippet xi "Xi" A 
 \xi
 endsnippet
 
+context "math()"
 snippet Xi "Uppercase Xi" A 
 \Xi
 endsnippet
 
+context "math()"
 snippet omicron "Omicron" A 
 \omicron
 endsnippet
 
+context "math()"
 snippet Omicron "Uppercase Omicron" A 
 \Omicron
 endsnippet
 
+context "math()"
 snippet tau "Tau" A 
 \tau
 endsnippet
 
+context "math()"
 snippet Tau "Uppercase Tau" A 
 \Tau
 endsnippet
 
+context "math()"
 snippet upsilon "Upsilon" A 
 \upsilon
 endsnippet
 
+context "math()"
 snippet Upsilon "Uppercase Upsilon" A 
 \Upsilon
 endsnippet
 
+context "math()"
 snippet chi "Chi" A 
 \chi
 endsnippet
 
+context "math()"
 snippet Chi "Uppercase Chi" A 
 \Chi
 endsnippet
 
+context "math()"
 snippet psi "Psi" A 
 \psi
 endsnippet
 
+context "math()"
 snippet Psi "Uppercase Psi" A 
 \Psi
 endsnippet
 
+context "math()"
+snippet om "Omega" A 
+\omega
+endsnippet
+
+context "math()"
+snippet Om "Uppercase Omega" A 
+\Omega
+endsnippet
+
+context "math()"
 snippet omega "Omega" A 
 \omega
 endsnippet
 
+context "math()"
 snippet Omega "Uppercase Omega" A 
 \Omega
 endsnippet
 
-snippet epsil "Epsilon" A 
+context "math()"
+snippet eps "Epsilon" A 
 \epsilon
 endsnippet
 
-snippet varepsil "Variable Epsilon" A 
+context "math()"
+snippet veps "Variable Epsilon" A 
 \varepsilon
 endsnippet
 
-snippet Epsil "Uppercase Epsilon" A 
+context "math()"
+snippet Eps "Uppercase Epsilon" A 
 \Epsilon
 endsnippet
 
-snippet thet "Theta" A 
+context "math()"
+snippet epsilon "Epsilon" A 
+\epsilon
+endsnippet
+
+context "math()"
+snippet vepsilon "Variable Epsilon" A 
+\varepsilon
+endsnippet
+
+context "math()"
+snippet Epsilon "Uppercase Epsilon" A 
+\Epsilon
+endsnippet
+
+context "math()"
+snippet th "Theta" A 
 \theta
 endsnippet
 
-snippet varthet "Variable Theta" A 
+context "math()"
+snippet vth "Variable Theta" A 
 \vartheta
 endsnippet
 
-snippet Thet "Uppercase Theta" A 
+context "math()"
+snippet Th "Uppercase Theta" A 
 \Theta
 endsnippet
 
-snippet kap "Kappa" A 
+context "math()"
+snippet theta "Theta" A 
+\theta
+endsnippet
+
+context "math()"
+snippet vtheta "Variable Theta" A 
+\vartheta
+endsnippet
+
+context "math()"
+snippet Theta "Uppercase Theta" A 
+\Theta
+endsnippet
+
+context "math()"
+snippet kappa "Kappa" A 
 \kappa
 endsnippet
 
-snippet varkap "Variable Kappa" A 
+context "math()"
+snippet vkappa "Variable Kappa" A 
 \varkappa
 endsnippet
 
-snippet Kap "Uppercase Kappa" A 
+context "math()"
+snippet Kappa "Uppercase Kappa" A 
 \Kappa
 endsnippet
 
+context "math()"
 snippet pi "Pi" A 
 \pi
 endsnippet
 
-snippet varpi "Variable Pi" A 
+context "math()"
+snippet vpi "Variable Pi" A 
 \varpi
 endsnippet
 
+context "math()"
 snippet Pi "Uppercase Pi" A 
 \Pi
 endsnippet
 
+context "math()"
 snippet rho "Rho" A 
 \rho
 endsnippet
 
-snippet varrho "Variable Rho" A 
+context "math()"
+snippet vrho "Variable Rho" A 
 \varrho
 endsnippet
 
+context "math()"
 snippet Rho "Uppercase Rho" A 
 \Rho
 endsnippet
 
+context "math()"
+snippet sig "Sigma" A 
+\sigma
+endsnippet
+
+context "math()"
+snippet vsig "Variable Sigma" A 
+\varsigma
+endsnippet
+
+context "math()"
+snippet Sig "Uppercase Sigma" A 
+\Sig
+endsnippet
+
+context "math()"
 snippet sigma "Sigma" A 
 \sigma
 endsnippet
 
-snippet varsigma "Variable Sigma" A 
+context "math()"
+snippet vsigma "Variable Sigma" A 
 \varsigma
 endsnippet
 
+context "math()"
 snippet Sigma "Uppercase Sigma" A 
-\Sigma
+\Sig
 endsnippet
 
+context "math()"
 snippet phi "Phi" A 
 \phi
 endsnippet
 
-snippet varphi "Variable Phi" A 
+context "math()"
+snippet vphi "Variable Phi" A 
 \varphi
 endsnippet
 
+context "math()"
 snippet Phi "Uppercase Phi" A 
 \Phi
 endsnippet
 
+context "math()"
+snippet gm "Gamma" A 
+\gamma
+endsnippet
+
+context "math()"
+snippet Gm "Uppercase Gamma" A 
+\Gamma
+endsnippet
+
+context "math()"
 snippet gamma "Gamma" A 
 \gamma
 endsnippet
 
+context "math()"
 snippet Gamma "Uppercase Gamma" A 
 \Gamma
 endsnippet
