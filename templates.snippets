@@ -1,0 +1,142 @@
+snippet header "Minimal header template"
+\documentclass[a4paper, 11pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[english]{babel}
+% \usepackage[french]{babel}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{graphicx}
+% \usepackage{tikz}
+\usepackage[
+    headheight = 11pt,  
+    top        = 1.5cm, 
+    bottom     = 1.5cm,
+    left       = 1.5cm,
+    right      = 1.5cm 
+        ]{geometry}
+
+% \twocolumn
+% \setlength{\columnsep}{0.5cm}
+
+\title{Article title}
+\author{Auteur}
+\date{\today}
+\begin{document}
+\maketitle
+
+$1
+
+\end{document}
+endsnippet
+
+
+
+
+
+
+
+
+
+snippet article "Revtex article"
+\documentclass[%
+ preprint,
+ amsmath,amssymb,
+ aps,
+]{revtex4-2}
+% http://web.mit.edu/8.13/www/revtex4-command-summary.pdf
+
+\usepackage{graphicx}
+\usepackage{dcolumn}
+\usepackage{bm}
+\usepackage{hyperref}
+\usepackage{graphicx}
+\usepackage{color}
+
+\begin{document}
+\title{title}
+\author{author}
+\affiliation{
+    affiliation
+}%
+\date{\today}
+
+\begin{abstract}
+    \textbf{Abstract:}
+\end{abstract}
+
+\maketitle
+
+\end{document}
+endsnippet
+
+
+
+
+
+
+
+
+
+snippet shortreport "Report without a full titlepage"
+\documentclass[a4paper,11pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[english]{babel}
+\usepackage{xcolor}
+\usepackage[runin]{abstract}
+\usepackage[top = 2.5cm, bottom = 2.5cm, left = 2cm, right = 2cm]{geometry}
+\usepackage{float, graphicx, appendix, fancyhdr, amsmath, amsfonts}
+\usepackage{hyperref}
+\usepackage{titlesec}
+\pagestyle{fancy}
+
+\renewcommand{\theequation}{\arabic{section}.\arabic{equation}}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+\definecolor{mycolor}{HTML}{293979}
+
+\newcommand{\tensor}[1]{\underline{\underline{#1}}}
+\renewcommand{\arraystretch}{1.5}
+
+\titleformat
+{\section}
+{\color{mycolor}\normalfont\LARGE\sffamily}
+{\textsf{\thesection}}{1em}{}
+
+\titleformat
+{\subsection}
+{\color{mycolor}\normalfont\Large\sffamily}
+{\textsf{\thesubsection}}{1em}{}
+
+\titleformat
+{\subsubsection}
+{\color{mycolor}\normalfont\sffamily}
+{\textsf{\thesubsubsection}}{1em}{}
+\setcounter{tocdepth}{4}
+
+% En-têtes et pieds de pages ================
+\cfoot{} \rhead{}
+\lfoot{\textcolor{mycolor}{\textsf{cursus}}}
+\rfoot{\textcolor{mycolor}{\textsf{Page \thepage}}}
+\lhead{\textcolor{mycolor}{\textsf{Report -- Author}}}
+
+\begin{document}
+\thispagestyle{empty}
+\noindent{\LARGE\sffamily Topic \\\\ subtopic}
+\begin{center}
+\noindent{\color{mycolor}\Huge\sffamily Project report}\\\\ \vskip 0.4cm
+\noindent{\LARGE\sffamily Author}\\\\ \vskip 0.2cm
+\noindent{\Large\sffamily month}\\\\ \vskip 0.4cm
+%\noindent\includegraphics[width=200pt]{example-image}\\\\ \vskip 0.2cm
+\vskip 1cm
+\end{center}
+\tableofcontents
+
+\end{document}
+
+endsnippet
+
+
+
+
